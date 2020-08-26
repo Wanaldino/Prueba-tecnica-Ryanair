@@ -1,0 +1,38 @@
+
+{
+    "stations": [
+        {
+            "alias": null,
+            "alternateName": null,
+            "code": "AAR",
+            "countryAlias": null,
+            "countryCode": "DK",
+            "countryGroupCode": "0",
+            "countryGroupName": "EU/EEA",
+            "countryName": "Denmark",
+            "latitude": "561837N",
+            "longitude": "0103705E",
+            "markets": [
+                {
+                    "code": "AGP"
+                },
+                {
+                    "code": "ALC"
+                },
+                {
+                    "code": "GRO"
+                },
+                {
+                    "code": "PMI"
+                },
+                {
+                    "code": "STN"
+                }
+            ],
+            "mobileBoardingPass": true,
+            "name": "Aarhus",
+            "notices": null,
+            "timeZoneCode": "DK"
+        }
+    ]
+}

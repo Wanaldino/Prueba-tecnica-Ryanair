@@ -21,6 +21,10 @@
 		F04F3F0624F6982700B7D5E0 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F0524F6982700B7D5E0 /* Flight.swift */; };
 		F04F3F0824F69CA000B7D5E0 /* Fare.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F0724F69CA000B7D5E0 /* Fare.swift */; };
 		F04F3F0A24F69E7900B7D5E0 /* FareInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F0924F69E7900B7D5E0 /* FareInfo.swift */; };
+		F04F3F1224F6A53A00B7D5E0 /* stationsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = F04F3F1024F6A53A00B7D5E0 /* stationsMock.json */; };
+		F04F3F1324F6A53A00B7D5E0 /* searchMock.json in Resources */ = {isa = PBXBuildFile; fileRef = F04F3F1124F6A53A00B7D5E0 /* searchMock.json */; };
+		F04F3F1524F6A58200B7D5E0 /* StationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F1424F6A58200B7D5E0 /* StationsResponse.swift */; };
+		F04F3F1724F6A7AF00B7D5E0 /* FormEntitiesMockDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F1624F6A7AF00B7D5E0 /* FormEntitiesMockDecode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,10 @@
 		F04F3F0524F6982700B7D5E0 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		F04F3F0724F69CA000B7D5E0 /* Fare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fare.swift; sourceTree = "<group>"; };
 		F04F3F0924F69E7900B7D5E0 /* FareInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FareInfo.swift; sourceTree = "<group>"; };
+		F04F3F1024F6A53A00B7D5E0 /* stationsMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stationsMock.json; sourceTree = "<group>"; };
+		F04F3F1124F6A53A00B7D5E0 /* searchMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = searchMock.json; sourceTree = "<group>"; };
+		F04F3F1424F6A58200B7D5E0 /* StationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsResponse.swift; sourceTree = "<group>"; };
+		F04F3F1624F6A7AF00B7D5E0 /* FormEntitiesMockDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormEntitiesMockDecode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,8 @@
 		F04F3ED624F6847600B7D5E0 /* Prueba tecnica Rynair */ = {
 			isa = PBXGroup;
 			children = (
+				F04F3F1124F6A53A00B7D5E0 /* searchMock.json */,
+				F04F3F1024F6A53A00B7D5E0 /* stationsMock.json */,
 				F04F3EF924F6877F00B7D5E0 /* Form */,
 				F04F3ED724F6847600B7D5E0 /* AppDelegate.swift */,
 				F04F3ED924F6847600B7D5E0 /* SceneDelegate.swift */,
@@ -109,6 +119,7 @@
 			children = (
 				F04F3EEE24F6847700B7D5E0 /* Prueba_tecnica_RynairTests.swift */,
 				F04F3EF024F6847700B7D5E0 /* Info.plist */,
+				F04F3F1624F6A7AF00B7D5E0 /* FormEntitiesMockDecode.swift */,
 			);
 			path = "Prueba tecnica RynairTests";
 			sourceTree = "<group>";
@@ -124,6 +135,7 @@
 		F04F3EFA24F6878800B7D5E0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				F04F3F1424F6A58200B7D5E0 /* StationsResponse.swift */,
 				F04F3EFB24F6879F00B7D5E0 /* Stations.swift */,
 				F04F3EFD24F688E400B7D5E0 /* Market.swift */,
 				F04F3EFF24F689A100B7D5E0 /* FlightSearchResponse.swift */,
@@ -217,8 +229,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F04F3F1224F6A53A00B7D5E0 /* stationsMock.json in Resources */,
 				F04F3EE424F6847700B7D5E0 /* LaunchScreen.storyboard in Resources */,
 				F04F3EE124F6847700B7D5E0 /* Assets.xcassets in Resources */,
+				F04F3F1324F6A53A00B7D5E0 /* searchMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +261,7 @@
 				F04F3F0224F6942E00B7D5E0 /* Trip.swift in Sources */,
 				F04F3F0424F695BD00B7D5E0 /* TripDate.swift in Sources */,
 				F04F3EFE24F688E400B7D5E0 /* Market.swift in Sources */,
+				F04F3F1524F6A58200B7D5E0 /* StationsResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F04F3F1724F6A7AF00B7D5E0 /* FormEntitiesMockDecode.swift in Sources */,
 				F04F3EEF24F6847700B7D5E0 /* Prueba_tecnica_RynairTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
