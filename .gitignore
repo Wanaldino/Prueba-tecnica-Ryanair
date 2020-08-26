@@ -1,0 +1,32 @@
+# Mac OS X
+*.DS_Store
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+*.xcworkspace/
+xcuserdata/
+
+# Package files
+*.swiftpm
+
+# Generated files
+*.o
+*.pyc
+
+
+#Python modules
+MANIFEST
+dist/
+*.build/
+
+# Backup files
+*~.nib
+
+
+#External dependencies
+Pods/
+*.lock
