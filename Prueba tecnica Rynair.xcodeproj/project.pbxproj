@@ -13,6 +13,14 @@
 		F04F3EE124F6847700B7D5E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F04F3EE024F6847700B7D5E0 /* Assets.xcassets */; };
 		F04F3EE424F6847700B7D5E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F04F3EE224F6847700B7D5E0 /* LaunchScreen.storyboard */; };
 		F04F3EEF24F6847700B7D5E0 /* Prueba_tecnica_RynairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3EEE24F6847700B7D5E0 /* Prueba_tecnica_RynairTests.swift */; };
+		F04F3EFC24F6879F00B7D5E0 /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3EFB24F6879F00B7D5E0 /* Stations.swift */; };
+		F04F3EFE24F688E400B7D5E0 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3EFD24F688E400B7D5E0 /* Market.swift */; };
+		F04F3F0024F689A100B7D5E0 /* FlightSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3EFF24F689A100B7D5E0 /* FlightSearchResponse.swift */; };
+		F04F3F0224F6942E00B7D5E0 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F0124F6942E00B7D5E0 /* Trip.swift */; };
+		F04F3F0424F695BD00B7D5E0 /* TripDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F0324F695BD00B7D5E0 /* TripDate.swift */; };
+		F04F3F0624F6982700B7D5E0 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F0524F6982700B7D5E0 /* Flight.swift */; };
+		F04F3F0824F69CA000B7D5E0 /* Fare.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F0724F69CA000B7D5E0 /* Fare.swift */; };
+		F04F3F0A24F69E7900B7D5E0 /* FareInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F0924F69E7900B7D5E0 /* FareInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,14 @@
 		F04F3EEA24F6847700B7D5E0 /* Prueba tecnica RynairTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Prueba tecnica RynairTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F04F3EEE24F6847700B7D5E0 /* Prueba_tecnica_RynairTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prueba_tecnica_RynairTests.swift; sourceTree = "<group>"; };
 		F04F3EF024F6847700B7D5E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F04F3EFB24F6879F00B7D5E0 /* Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
+		F04F3EFD24F688E400B7D5E0 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
+		F04F3EFF24F689A100B7D5E0 /* FlightSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchResponse.swift; sourceTree = "<group>"; };
+		F04F3F0124F6942E00B7D5E0 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		F04F3F0324F695BD00B7D5E0 /* TripDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDate.swift; sourceTree = "<group>"; };
+		F04F3F0524F6982700B7D5E0 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
+		F04F3F0724F69CA000B7D5E0 /* Fare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fare.swift; sourceTree = "<group>"; };
+		F04F3F0924F69E7900B7D5E0 /* FareInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FareInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +93,7 @@
 		F04F3ED624F6847600B7D5E0 /* Prueba tecnica Rynair */ = {
 			isa = PBXGroup;
 			children = (
+				F04F3EF924F6877F00B7D5E0 /* Form */,
 				F04F3ED724F6847600B7D5E0 /* AppDelegate.swift */,
 				F04F3ED924F6847600B7D5E0 /* SceneDelegate.swift */,
 				F04F3EDB24F6847600B7D5E0 /* ViewController.swift */,
@@ -94,6 +111,29 @@
 				F04F3EF024F6847700B7D5E0 /* Info.plist */,
 			);
 			path = "Prueba tecnica RynairTests";
+			sourceTree = "<group>";
+		};
+		F04F3EF924F6877F00B7D5E0 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				F04F3EFA24F6878800B7D5E0 /* Entities */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		F04F3EFA24F6878800B7D5E0 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F04F3EFB24F6879F00B7D5E0 /* Stations.swift */,
+				F04F3EFD24F688E400B7D5E0 /* Market.swift */,
+				F04F3EFF24F689A100B7D5E0 /* FlightSearchResponse.swift */,
+				F04F3F0124F6942E00B7D5E0 /* Trip.swift */,
+				F04F3F0324F695BD00B7D5E0 /* TripDate.swift */,
+				F04F3F0524F6982700B7D5E0 /* Flight.swift */,
+				F04F3F0724F69CA000B7D5E0 /* Fare.swift */,
+				F04F3F0924F69E7900B7D5E0 /* FareInfo.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,9 +236,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F04F3F0624F6982700B7D5E0 /* Flight.swift in Sources */,
+				F04F3F0824F69CA000B7D5E0 /* Fare.swift in Sources */,
 				F04F3EDC24F6847600B7D5E0 /* ViewController.swift in Sources */,
 				F04F3ED824F6847600B7D5E0 /* AppDelegate.swift in Sources */,
+				F04F3F0A24F69E7900B7D5E0 /* FareInfo.swift in Sources */,
+				F04F3F0024F689A100B7D5E0 /* FlightSearchResponse.swift in Sources */,
+				F04F3EFC24F6879F00B7D5E0 /* Stations.swift in Sources */,
 				F04F3EDA24F6847600B7D5E0 /* SceneDelegate.swift in Sources */,
+				F04F3F0224F6942E00B7D5E0 /* Trip.swift in Sources */,
+				F04F3F0424F695BD00B7D5E0 /* TripDate.swift in Sources */,
+				F04F3EFE24F688E400B7D5E0 /* Market.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
