@@ -12,7 +12,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        FormDataManager().retrieveStations() { _ in
+            
+        }
         view.backgroundColor = .red
     }
 

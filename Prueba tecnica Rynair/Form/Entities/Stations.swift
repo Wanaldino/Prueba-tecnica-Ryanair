@@ -9,7 +9,7 @@
 import Foundation
 
 struct Station: Codable {
-    let alias: String?
+    let alias: [String]
     let alternateName: String?
     let code: String
     let countryAlias: String?
