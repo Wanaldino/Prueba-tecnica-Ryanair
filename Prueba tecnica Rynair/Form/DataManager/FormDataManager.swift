@@ -10,14 +10,14 @@ import Foundation
 
 class FormDataManager {
     var stations: [Station]?
-    
+}
+
+extension FormDataManager: FormDataManagerProtocol {
     func retrieveStations(completion: ([Station]) -> Void) {
 //        let fileURL = Bundle.main.url(forResource: "stationsMock", withExtension: "json")!
 //        let data = try! Data(contentsOf: fileURL)
 //        let results = try! JSONDecoder().decode(StationsResponse.self, from: data)
-//
-//        completion(results)
-//        print(results)
+//        completion(results.stations)
         
         if let stations = stations {
             completion(stations)
