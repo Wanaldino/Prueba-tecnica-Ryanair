@@ -1,5 +1,5 @@
 //
-//  FormEntitiesMockDecode.swift
+//  EntitiesMockDecode.swift
 //  Prueba tecnica RynairTests
 //
 //  Created by Wanaldino Antimonio on 26/08/2020.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import Prueba_tecnica_Rynair
 
-class FormEntitiesMockDecode: XCTestCase {
+class EntitiesMockDecode: XCTestCase {
     func testDecodeStations() throws {
         let fileURL = Bundle.main.url(forResource: "stationsMock", withExtension: "json")!
         let data = try Data(contentsOf: fileURL)

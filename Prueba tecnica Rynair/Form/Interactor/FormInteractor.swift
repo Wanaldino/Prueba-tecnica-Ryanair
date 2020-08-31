@@ -43,7 +43,7 @@ extension FormInteractor: FormInteractorProtocol {
     func didSelectStation(_ station: Station, for type: StationSelectionType) {
         switch type {
         case .originStation:
-            if selectedDestinationStation?.code == station.code { return }
+            if selectedOriginStation?.code == station.code { return }
             selectedOriginStation = station
             selectedDestinationStation = nil
         case .destinationStation:

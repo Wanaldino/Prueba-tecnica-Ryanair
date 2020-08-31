@@ -31,6 +31,7 @@
 		F01DB17F24FC4528007FE73A /* String+dateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB17E24FC4528007FE73A /* String+dateTransform.swift */; };
 		F01DB18124FCF599007FE73A /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB18024FCF599007FE73A /* Dialog.swift */; };
 		F01DB18324FCFABD007FE73A /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB18224FCFABD007FE73A /* Loader.swift */; };
+		F01DB18524FD2FE9007FE73A /* FormInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB18424FD2FE9007FE73A /* FormInteractorTest.swift */; };
 		F04F3ED824F6847600B7D5E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3ED724F6847600B7D5E0 /* AppDelegate.swift */; };
 		F04F3EDA24F6847600B7D5E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3ED924F6847600B7D5E0 /* SceneDelegate.swift */; };
 		F04F3EE124F6847700B7D5E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F04F3EE024F6847700B7D5E0 /* Assets.xcassets */; };
@@ -48,7 +49,7 @@
 		F04F3F1224F6A53A00B7D5E0 /* stationsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = F04F3F1024F6A53A00B7D5E0 /* stationsMock.json */; };
 		F04F3F1324F6A53A00B7D5E0 /* searchMock.json in Resources */ = {isa = PBXBuildFile; fileRef = F04F3F1124F6A53A00B7D5E0 /* searchMock.json */; };
 		F04F3F1524F6A58200B7D5E0 /* StationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F1424F6A58200B7D5E0 /* StationsResponse.swift */; };
-		F04F3F1724F6A7AF00B7D5E0 /* FormEntitiesMockDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F1624F6A7AF00B7D5E0 /* FormEntitiesMockDecode.swift */; };
+		F04F3F1724F6A7AF00B7D5E0 /* EntitiesMockDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F1624F6A7AF00B7D5E0 /* EntitiesMockDecode.swift */; };
 		F04F3F1D24FA5BD400B7D5E0 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F1C24FA5BD400B7D5E0 /* FormViewController.swift */; };
 		F04F3F2024FA5C1400B7D5E0 /* UIView+fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F1F24FA5C1400B7D5E0 /* UIView+fill.swift */; };
 		F04F3F2224FA63A300B7D5E0 /* UIView+dismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F2124FA63A300B7D5E0 /* UIView+dismissKeyboard.swift */; };
@@ -94,6 +95,7 @@
 		F01DB17E24FC4528007FE73A /* String+dateTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+dateTransform.swift"; sourceTree = "<group>"; };
 		F01DB18024FCF599007FE73A /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		F01DB18224FCFABD007FE73A /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		F01DB18424FD2FE9007FE73A /* FormInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormInteractorTest.swift; sourceTree = "<group>"; };
 		F04F3ED424F6847600B7D5E0 /* Prueba tecnica Rynair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prueba tecnica Rynair.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F04F3ED724F6847600B7D5E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F04F3ED924F6847600B7D5E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,7 +117,7 @@
 		F04F3F1024F6A53A00B7D5E0 /* stationsMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stationsMock.json; sourceTree = "<group>"; };
 		F04F3F1124F6A53A00B7D5E0 /* searchMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = searchMock.json; sourceTree = "<group>"; };
 		F04F3F1424F6A58200B7D5E0 /* StationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsResponse.swift; sourceTree = "<group>"; };
-		F04F3F1624F6A7AF00B7D5E0 /* FormEntitiesMockDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormEntitiesMockDecode.swift; sourceTree = "<group>"; };
+		F04F3F1624F6A7AF00B7D5E0 /* EntitiesMockDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitiesMockDecode.swift; sourceTree = "<group>"; };
 		F04F3F1C24FA5BD400B7D5E0 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		F04F3F1F24FA5C1400B7D5E0 /* UIView+fill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+fill.swift"; sourceTree = "<group>"; };
 		F04F3F2124FA63A300B7D5E0 /* UIView+dismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+dismissKeyboard.swift"; sourceTree = "<group>"; };
@@ -298,7 +300,8 @@
 			children = (
 				F04F3EEE24F6847700B7D5E0 /* Prueba_tecnica_RynairTests.swift */,
 				F04F3EF024F6847700B7D5E0 /* Info.plist */,
-				F04F3F1624F6A7AF00B7D5E0 /* FormEntitiesMockDecode.swift */,
+				F04F3F1624F6A7AF00B7D5E0 /* EntitiesMockDecode.swift */,
+				F01DB18424FD2FE9007FE73A /* FormInteractorTest.swift */,
 			);
 			path = "Prueba tecnica RynairTests";
 			sourceTree = "<group>";
@@ -533,7 +536,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F04F3F1724F6A7AF00B7D5E0 /* FormEntitiesMockDecode.swift in Sources */,
+				F04F3F1724F6A7AF00B7D5E0 /* EntitiesMockDecode.swift in Sources */,
+				F01DB18524FD2FE9007FE73A /* FormInteractorTest.swift in Sources */,
 				F04F3EEF24F6847700B7D5E0 /* Prueba_tecnica_RynairTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
