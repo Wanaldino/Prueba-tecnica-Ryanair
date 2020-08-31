@@ -25,8 +25,8 @@ class MainCoordinator: Coordinator {
             switch output {
             case .selectStation(let stations, let didSelect):
                 self.goToSelectStation(stations: stations, didSelect: didSelect)
-            case .showSearch:
-                break
+            case .showSearch(let trips):
+                self.goToSearchResults(trips: trips)
             }
         }).build()
         navigator.pushViewController(viewController, animated: true)
@@ -39,5 +39,10 @@ class MainCoordinator: Coordinator {
             self.navigator.dismiss(animated: true)
         }).build()
         navigator.present(viewController, animated: true)
+    }
+    
+    func goToSearchResults(trips: [Trip]) {
+        let viewController = FlightSearchBuilder(trips: trips).build()
+        navigator.pushViewController(viewController, animated: true)
     }
 }

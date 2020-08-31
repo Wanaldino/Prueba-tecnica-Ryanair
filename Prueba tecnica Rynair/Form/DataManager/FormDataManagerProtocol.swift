@@ -9,5 +9,6 @@
 import Foundation
 
 protocol FormDataManagerProtocol {
-    func retrieveStations(completion: ([Station]) -> Void)
+    func retrieveStations(completion: @escaping (Result<[Station], Error>) -> Void)
+    func retrieveFlight(for requestModel: FlightSearchModel, completion: @escaping (Result<[Trip], Error>) -> Void) 
 }

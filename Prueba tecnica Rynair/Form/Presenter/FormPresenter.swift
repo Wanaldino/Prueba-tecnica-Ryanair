@@ -14,9 +14,9 @@ class FormPresenter {
     let coordinatorOutput: (FormOutput) -> Void
     
     var selectedDate: Date?
-    var selectedAdults: Double = 1
-    var selectedTeens: Double = 0
-    var selectedChildren: Double = 0
+    var selectedAdults: Int = 1
+    var selectedTeens: Int = 0
+    var selectedChildren: Int = 0
     
     init(interactor: FormInteractorProtocol, coordinatorOutput: @escaping (FormOutput) -> Void) {
         self.interactor = interactor
@@ -62,16 +62,34 @@ extension FormPresenter: FormPresenterProtocol {
     }
     
     func didTapOriginStation() {
-        interactor.getOriginStations { [weak self] (stations) in
+        view?.showLoader()
+        interactor.getOriginStations { [weak self] (result) in
             guard let self = self else { return }
-            self.selectStation(for: stations, type: .originStation)
+            switch result {
+            case .success(let stations):
+                self.selectStation(for: stations, type: .originStation)
+                self.view?.dismissLoader()
+            case .failure(let error):
+                self.view?.dismissLoader()
+                let model = DialogModel(title: "Something went wrong", message: "Please try again")
+                self.view?.showDialog(with: model)
+            }
         }
     }
     
     func didTapDestinationStation() {
-        interactor.getDestinationStations { [weak self] (stations) in
+        view?.showLoader()
+        interactor.getDestinationStations { [weak self] (result) in
             guard let self = self else { return }
-            self.selectStation(for: stations, type: .destinationStation)
+            switch result {
+            case .success(let stations):
+                self.selectStation(for: stations, type: .destinationStation)
+                self.view?.dismissLoader()
+            case .failure(let error):
+                self.view?.dismissLoader()
+                let model = DialogModel(title: "Something went wrong", message: "Please try again")
+                self.view?.showDialog(with: model)
+            }
         }
     }
     
@@ -81,21 +99,40 @@ extension FormPresenter: FormPresenterProtocol {
     }
     
     func didChangeSelectedAdults(newValue: Double) {
-        selectedAdults = newValue
+        selectedAdults = Int(newValue)
         view?.update(with: viewModel)
     }
     
     func didChangeSelectedTeens(newValue: Double) {
-        selectedTeens = newValue
+        selectedTeens = Int(newValue)
         view?.update(with: viewModel)
     }
     
     func didChangeSelectedChildren(newValue: Double) {
-        selectedChildren = newValue
+        selectedChildren = Int(newValue)
         view?.update(with: viewModel)
     }
     
     func didTapSearch() {
-        coordinatorOutput(.showSearch)
+        guard let date = selectedDate else { return }
+        
+        view?.showLoader()
+        interactor.searchFlight(
+            date: date,
+            adults: selectedAdults,
+            teens: selectedTeens,
+            children: selectedChildren) { [weak self] (result) in
+                guard let self = self else { return }
+                switch result {
+                case .success(let trips):
+                    self.coordinatorOutput(.showSearch(trips))
+                    self.view?.dismissLoader()
+                case .failure(let error):
+                    self.view?.dismissLoader()
+                    //Handle error as a pop up or something to notify the user
+                    let model = DialogModel(title: "Something went wrong", message: "Please try again")
+                    self.view?.showDialog(with: model)
+                }
+        }
     }
 }

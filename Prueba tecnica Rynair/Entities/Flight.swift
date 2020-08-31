@@ -17,5 +17,5 @@ struct Flight: Codable {
     let flightNumber: String
     let infantsLeft: Int
     let flightKey: String
-    let businessFare: Fare
+    let businessFare: Fare?
 }

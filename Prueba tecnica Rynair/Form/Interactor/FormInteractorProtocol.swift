@@ -11,7 +11,8 @@ import Foundation
 protocol FormInteractorProtocol: class {
     var selectedOriginStation: Station? { get }
     var selectedDestinationStation: Station? { get }
-    func getOriginStations(completion: ([Station]) -> Void)
-    func getDestinationStations(completion: ([Station]) -> Void)
+    func getOriginStations(completion: @escaping (Result<[Station], Error>) -> Void)
+    func getDestinationStations(completion: @escaping (Result<[Station], Error>) -> Void)
     func didSelectStation(_ station: Station, for type: StationSelectionType)
+    func searchFlight(date: Date, adults: Int, teens: Int, children: Int, completion: @escaping (Result<[Trip], Error>) -> Void)
 }

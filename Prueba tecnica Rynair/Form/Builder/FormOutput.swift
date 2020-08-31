@@ -10,5 +10,5 @@ import Foundation
 
 enum FormOutput {
     case selectStation([Station], (Station) -> Void)
-    case showSearch
+    case showSearch([Trip])
 }

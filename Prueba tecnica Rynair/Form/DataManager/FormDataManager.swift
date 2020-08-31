@@ -13,21 +13,51 @@ class FormDataManager {
 }
 
 extension FormDataManager: FormDataManagerProtocol {
-    func retrieveStations(completion: ([Station]) -> Void) {
+    func retrieveStations(completion: @escaping (Result<[Station], Error>) -> Void) {
 //        let fileURL = Bundle.main.url(forResource: "stationsMock", withExtension: "json")!
 //        let data = try! Data(contentsOf: fileURL)
 //        let results = try! JSONDecoder().decode(StationsResponse.self, from: data)
-//        completion(results.stations)
+//        completion(.success(results.stations))
         
         if let stations = stations {
-            completion(stations)
-        } else if
-            let url = URL(string: "https://tripstest.ryanair.com/static/stations.json"),
-            let data = try? Data(contentsOf: url),
-            let results = try? JSONDecoder().decode(StationsResponse.self, from: data)
-        {
-            stations = results.stations
-            completion(results.stations)
+            completion(.success(stations))
+        } else if let url = URL(string: "https://tripstest.ryanair.com/static/stations.json") {
+            DispatchQueue.global().async { [weak self] in
+                guard let self = self else { return completion(.failure(NSError())) }
+                if let data = try? Data(contentsOf: url),
+                    let results = try? JSONDecoder().decode(StationsResponse.self, from: data) {
+                    DispatchQueue.main.async { [weak self] in
+                        guard let self = self else { return completion(.failure(NSError())) }
+                        self.stations = results.stations
+                        completion(.success(results.stations))
+                    }
+                } else {
+                    completion(.failure(NSError()))
+                }
+            }
         }
+    }
+    
+    func retrieveFlight(for requestModel: FlightSearchModel, completion: @escaping (Result<[Trip], Error>) -> Void) {
+//        let fileURL = Bundle.main.url(forResource: "searchMock", withExtension: "json")!
+//        let data = try! Data(contentsOf: fileURL)
+//        let results = try! JSONDecoder().decode(FlightSearchResponse.self, from: data)
+//        completion(results.trips)
+        
+        var urlRequest = URLRequest(url: requestModel.url!)
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-type")
+        let task = URLSession(configuration: .default).dataTask(with: urlRequest) { (data, response, error) in
+            if let error = error {
+                completion(.failure(error))
+            } else if let data = data, let results = try? JSONDecoder().decode(FlightSearchResponse.self, from: data) {
+                DispatchQueue.main.async {
+                    completion(.success(results.trips))
+                }
+            } else {
+                completion(.failure(NSError()))
+            }
+        }
+
+        task.resume()
     }
 }

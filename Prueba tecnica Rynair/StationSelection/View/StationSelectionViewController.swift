@@ -13,6 +13,7 @@ class StationSelectionViewController: UITableViewController {
         let searchBar = UISearchBar()
         searchBar.heightAnchor.constraint(equalToConstant: 60).isActive = true
         searchBar.sizeToFit()
+        searchBar.becomeFirstResponder()
         return searchBar
     }()
     

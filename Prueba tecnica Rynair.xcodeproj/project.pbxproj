@@ -22,6 +22,15 @@
 		F01DB15F24FAB05F007FE73A /* FormOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB15E24FAB05F007FE73A /* FormOutput.swift */; };
 		F01DB16124FAB3EB007FE73A /* FormInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB16024FAB3EB007FE73A /* FormInteractorProtocol.swift */; };
 		F01DB16324FAB645007FE73A /* FormDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB16224FAB645007FE73A /* FormDataManagerProtocol.swift */; };
+		F01DB16C24FC1237007FE73A /* FlightSearchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB16B24FC1237007FE73A /* FlightSearchBuilder.swift */; };
+		F01DB16E24FC13EA007FE73A /* FlightSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB16D24FC13EA007FE73A /* FlightSearchViewController.swift */; };
+		F01DB17024FC141B007FE73A /* FlightSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB16F24FC141B007FE73A /* FlightSearchPresenter.swift */; };
+		F01DB17224FC1430007FE73A /* FlightSearchPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB17124FC1430007FE73A /* FlightSearchPresenterProtocol.swift */; };
+		F01DB17424FC14AF007FE73A /* FlightSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB17324FC14AF007FE73A /* FlightSearchTableViewCell.swift */; };
+		F01DB17624FC2C90007FE73A /* FlightSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB17524FC2C90007FE73A /* FlightSearchModel.swift */; };
+		F01DB17F24FC4528007FE73A /* String+dateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB17E24FC4528007FE73A /* String+dateTransform.swift */; };
+		F01DB18124FCF599007FE73A /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB18024FCF599007FE73A /* Dialog.swift */; };
+		F01DB18324FCFABD007FE73A /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB18224FCFABD007FE73A /* Loader.swift */; };
 		F04F3ED824F6847600B7D5E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3ED724F6847600B7D5E0 /* AppDelegate.swift */; };
 		F04F3EDA24F6847600B7D5E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3ED924F6847600B7D5E0 /* SceneDelegate.swift */; };
 		F04F3EE124F6847700B7D5E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F04F3EE024F6847700B7D5E0 /* Assets.xcassets */; };
@@ -76,6 +85,15 @@
 		F01DB15E24FAB05F007FE73A /* FormOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormOutput.swift; sourceTree = "<group>"; };
 		F01DB16024FAB3EB007FE73A /* FormInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormInteractorProtocol.swift; sourceTree = "<group>"; };
 		F01DB16224FAB645007FE73A /* FormDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDataManagerProtocol.swift; sourceTree = "<group>"; };
+		F01DB16B24FC1237007FE73A /* FlightSearchBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchBuilder.swift; sourceTree = "<group>"; };
+		F01DB16D24FC13EA007FE73A /* FlightSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchViewController.swift; sourceTree = "<group>"; };
+		F01DB16F24FC141B007FE73A /* FlightSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchPresenter.swift; sourceTree = "<group>"; };
+		F01DB17124FC1430007FE73A /* FlightSearchPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchPresenterProtocol.swift; sourceTree = "<group>"; };
+		F01DB17324FC14AF007FE73A /* FlightSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchTableViewCell.swift; sourceTree = "<group>"; };
+		F01DB17524FC2C90007FE73A /* FlightSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchModel.swift; sourceTree = "<group>"; };
+		F01DB17E24FC4528007FE73A /* String+dateTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+dateTransform.swift"; sourceTree = "<group>"; };
+		F01DB18024FCF599007FE73A /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
+		F01DB18224FCFABD007FE73A /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		F04F3ED424F6847600B7D5E0 /* Prueba tecnica Rynair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prueba tecnica Rynair.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F04F3ED724F6847600B7D5E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F04F3ED924F6847600B7D5E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +178,8 @@
 			children = (
 				F01DB14624FA9C49007FE73A /* Builder.swift */,
 				F01DB15924FAAD84007FE73A /* Coordinator.swift */,
+				F01DB18024FCF599007FE73A /* Dialog.swift */,
+				F01DB18224FCFABD007FE73A /* Loader.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -199,6 +219,42 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		F01DB16624FC11CE007FE73A /* FlightSearch */ = {
+			isa = PBXGroup;
+			children = (
+				F01DB16A24FC1221007FE73A /* Builder */,
+				F01DB16924FC121E007FE73A /* View */,
+				F01DB16824FC11F8007FE73A /* Presenter */,
+			);
+			path = FlightSearch;
+			sourceTree = "<group>";
+		};
+		F01DB16824FC11F8007FE73A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F01DB16F24FC141B007FE73A /* FlightSearchPresenter.swift */,
+				F01DB17124FC1430007FE73A /* FlightSearchPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F01DB16924FC121E007FE73A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F01DB16D24FC13EA007FE73A /* FlightSearchViewController.swift */,
+				F01DB17324FC14AF007FE73A /* FlightSearchTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F01DB16A24FC1221007FE73A /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				F01DB16B24FC1237007FE73A /* FlightSearchBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		F04F3ECB24F6847600B7D5E0 = {
 			isa = PBXGroup;
 			children = (
@@ -224,8 +280,9 @@
 				F01DB14524FA9C42007FE73A /* Common */,
 				F04F3EFA24F6878800B7D5E0 /* Entities */,
 				F04F3F1E24FA5C0600B7D5E0 /* Extensions */,
-				F01DB13E24FA9B1F007FE73A /* StationSelection */,
 				F04F3EF924F6877F00B7D5E0 /* Form */,
+				F01DB13E24FA9B1F007FE73A /* StationSelection */,
+				F01DB16624FC11CE007FE73A /* FlightSearch */,
 				F04F3ED724F6847600B7D5E0 /* AppDelegate.swift */,
 				F04F3ED924F6847600B7D5E0 /* SceneDelegate.swift */,
 				F01DB15C24FAAE3F007FE73A /* MainCoordinator.swift */,
@@ -264,6 +321,7 @@
 				F04F3F1424F6A58200B7D5E0 /* StationsResponse.swift */,
 				F04F3EFB24F6879F00B7D5E0 /* Stations.swift */,
 				F04F3EFD24F688E400B7D5E0 /* Market.swift */,
+				F01DB17524FC2C90007FE73A /* FlightSearchModel.swift */,
 				F04F3EFF24F689A100B7D5E0 /* FlightSearchResponse.swift */,
 				F04F3F0124F6942E00B7D5E0 /* Trip.swift */,
 				F04F3F0324F695BD00B7D5E0 /* TripDate.swift */,
@@ -299,6 +357,7 @@
 				F04F3F1F24FA5C1400B7D5E0 /* UIView+fill.swift */,
 				F04F3F2124FA63A300B7D5E0 /* UIView+dismissKeyboard.swift */,
 				F01DB15324FAA635007FE73A /* Array+notEmpty.swift */,
+				F01DB17E24FC4528007FE73A /* String+dateTransform.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -424,8 +483,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F04F3F0624F6982700B7D5E0 /* Flight.swift in Sources */,
+				F01DB17624FC2C90007FE73A /* FlightSearchModel.swift in Sources */,
+				F01DB17424FC14AF007FE73A /* FlightSearchTableViewCell.swift in Sources */,
 				F04F3F0824F69CA000B7D5E0 /* Fare.swift in Sources */,
 				F01DB15824FAAAA2007FE73A /* StationSelectionPresenterProtocol.swift in Sources */,
+				F01DB18124FCF599007FE73A /* Dialog.swift in Sources */,
+				F01DB17224FC1430007FE73A /* FlightSearchPresenterProtocol.swift in Sources */,
 				F04F3F1D24FA5BD400B7D5E0 /* FormViewController.swift in Sources */,
 				F01DB16124FAB3EB007FE73A /* FormInteractorProtocol.swift in Sources */,
 				F04F3ED824F6847600B7D5E0 /* AppDelegate.swift in Sources */,
@@ -442,10 +505,14 @@
 				F01DB15D24FAAE3F007FE73A /* MainCoordinator.swift in Sources */,
 				F01DB15A24FAAD84007FE73A /* Coordinator.swift in Sources */,
 				F04F3F2224FA63A300B7D5E0 /* UIView+dismissKeyboard.swift in Sources */,
+				F01DB16C24FC1237007FE73A /* FlightSearchBuilder.swift in Sources */,
+				F01DB17024FC141B007FE73A /* FlightSearchPresenter.swift in Sources */,
 				F04F3F2C24FA747D00B7D5E0 /* FormViewProtocol.swift in Sources */,
 				F04F3F0024F689A100B7D5E0 /* FlightSearchResponse.swift in Sources */,
+				F01DB16E24FC13EA007FE73A /* FlightSearchViewController.swift in Sources */,
 				F04F3EFC24F6879F00B7D5E0 /* Stations.swift in Sources */,
 				F04F3F2A24FA702B00B7D5E0 /* FormPresenterProtocol.swift in Sources */,
+				F01DB18324FCFABD007FE73A /* Loader.swift in Sources */,
 				F01DB15624FAA983007FE73A /* StationSelectionViewProtocol.swift in Sources */,
 				F04F3EDA24F6847600B7D5E0 /* SceneDelegate.swift in Sources */,
 				F01DB16324FAB645007FE73A /* FormDataManagerProtocol.swift in Sources */,
@@ -456,6 +523,7 @@
 				F04F3F2E24FA75B700B7D5E0 /* FormViewModel.swift in Sources */,
 				F01DB15F24FAB05F007FE73A /* FormOutput.swift in Sources */,
 				F04F3F2824FA666900B7D5E0 /* FormInteractor.swift in Sources */,
+				F01DB17F24FC4528007FE73A /* String+dateTransform.swift in Sources */,
 				F04F3F1524F6A58200B7D5E0 /* StationsResponse.swift in Sources */,
 				F01DB14724FA9C49007FE73A /* Builder.swift in Sources */,
 			);

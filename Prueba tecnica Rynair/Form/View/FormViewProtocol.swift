@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol FormViewProtocol: class {
+protocol FormViewProtocol: class, Dialog, Loader {
     func update(with model: FormViewModel)
 }

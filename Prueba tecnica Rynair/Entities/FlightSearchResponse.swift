@@ -9,8 +9,12 @@
 import Foundation
 
 struct FlightSearchResponse: Codable {
+    let termsOfUse: String
     let currency: String
     let serverTimeUTC: String
     let currPrecision: Int
+    let routeGroup: String
+    let tripType: String
+    let upgradeType: String
     let trips: [Trip]
 }
