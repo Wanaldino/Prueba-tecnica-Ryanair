@@ -1,0 +1,11 @@
+"origin" = "Origen";
+"destination" = "Destino";
+"done" = "Hecho";
+"departure_date" = "Fecha de salida";
+"number_adults_single" = "%i adulto";
+"number_adults_plural" = "%i adultos";
+"number_teens_single" = "%i joven";
+"number_teens_plural" = "%i jovenes";
+"number_children_single" = "%i niño";
+"number_children_plural" = "%i niños";
+"search" = "Buscar";

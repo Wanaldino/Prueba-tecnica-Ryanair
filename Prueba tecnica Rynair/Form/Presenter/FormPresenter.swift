@@ -32,17 +32,20 @@ class FormPresenter {
         }
         
         let selectedAdults = Int(self.selectedAdults)
+        let adultsTextFormat = selectedAdults == 1 ? "number_adults_single".localized : "number_adults_plural".localized
         let selectedTeens = Int(self.selectedTeens)
+        let teensTextFormat = selectedTeens == 1 ? "number_teens_single".localized : "number_teens_plural".localized
         let selectedChildren = Int(self.selectedChildren)
+        let childrenTextFormat = selectedChildren == 1 ? "number_children_single".localized : "number_children_plural".localized
         let searchButtonEnable = interactor.selectedOriginStation != nil && interactor.selectedDestinationStation != nil && selectedDate != nil
         
         return FormViewModel(
             originStation: interactor.selectedOriginStation?.name,
             destinationStation: interactor.selectedDestinationStation?.name,
             departureDate: date,
-            adultsText: String(format: "%i adults", selectedAdults),
-            teensText: String(format: "%i teens", selectedTeens),
-            childrenText: String(format: "%i children", selectedChildren),
+            adultsText: String(format: adultsTextFormat, selectedAdults),
+            teensText: String(format: teensTextFormat, selectedTeens),
+            childrenText: String(format: childrenTextFormat, selectedChildren),
             searchButtonEnable: searchButtonEnable
         )
     }
@@ -59,17 +62,17 @@ class FormPresenter {
 extension FormPresenter: FormPresenterProtocol {
     var viewConfig: FormViewConfig {
         FormViewConfig(
-            originPlaceholder: "Origin:",
-            destinationPlaceholder: "Destination:",
-            doneButton: "Done",
-            departureDatePlaceholder: "Departure date:",
+            originPlaceholder: "origin".localized,
+            destinationPlaceholder: "destination".localized,
+            doneButton: "done".localized,
+            departureDatePlaceholder: "departure_date".localized,
             maxAdults: 6,
             minAdults: 1,
             maxTeens: 6,
             minTeens: 0,
             maxChildren: 6,
             minChildren: 0,
-            search: "Search"
+            search: "search".localized
         )
     }
     
