@@ -24,8 +24,9 @@ class FormInteractorTest: XCTestCase {
         
         let originStation = results.stations[0]
         let destinationStation = results.stations[1]
-        interactor.selectedOriginStation = originStation
-        interactor.selectedDestinationStation = destinationStation
+        
+        interactor.didSelectStation(originStation, for: .originStation)
+        interactor.didSelectStation(destinationStation, for: .destinationStation)
         
         interactor.didSelectStation(originStation, for: .originStation)
         
@@ -39,8 +40,9 @@ class FormInteractorTest: XCTestCase {
         
         let originStation = results.stations[0]
         let destinationStation = results.stations[1]
-        interactor.selectedOriginStation = originStation
-        interactor.selectedDestinationStation = destinationStation
+        
+        interactor.didSelectStation(originStation, for: .originStation)
+        interactor.didSelectStation(destinationStation, for: .destinationStation)
         
         let newStation = results.stations[2]
         interactor.didSelectStation(newStation, for: .originStation)
