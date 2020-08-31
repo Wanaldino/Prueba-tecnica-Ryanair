@@ -57,6 +57,22 @@ class FormPresenter {
 }
 
 extension FormPresenter: FormPresenterProtocol {
+    var viewConfig: FormViewConfig {
+        FormViewConfig(
+            originPlaceholder: "Origin:",
+            destinationPlaceholder: "Destination:",
+            doneButton: "Done",
+            departureDatePlaceholder: "Departure date:",
+            maxAdults: 6,
+            minAdults: 1,
+            maxTeens: 6,
+            minTeens: 0,
+            maxChildren: 6,
+            minChildren: 0,
+            search: "Search"
+        )
+    }
+    
     func viewDidLoad() {
         view?.update(with: viewModel)
     }

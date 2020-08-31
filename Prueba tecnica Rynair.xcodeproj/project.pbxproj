@@ -32,6 +32,7 @@
 		F01DB18124FCF599007FE73A /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB18024FCF599007FE73A /* Dialog.swift */; };
 		F01DB18324FCFABD007FE73A /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB18224FCFABD007FE73A /* Loader.swift */; };
 		F01DB18524FD2FE9007FE73A /* FormInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB18424FD2FE9007FE73A /* FormInteractorTest.swift */; };
+		F01DB18724FD37B1007FE73A /* FormViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB18624FD37B1007FE73A /* FormViewConfig.swift */; };
 		F04F3ED824F6847600B7D5E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3ED724F6847600B7D5E0 /* AppDelegate.swift */; };
 		F04F3EDA24F6847600B7D5E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3ED924F6847600B7D5E0 /* SceneDelegate.swift */; };
 		F04F3EE124F6847700B7D5E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F04F3EE024F6847700B7D5E0 /* Assets.xcassets */; };
@@ -96,6 +97,7 @@
 		F01DB18024FCF599007FE73A /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		F01DB18224FCFABD007FE73A /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		F01DB18424FD2FE9007FE73A /* FormInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormInteractorTest.swift; sourceTree = "<group>"; };
+		F01DB18624FD37B1007FE73A /* FormViewConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewConfig.swift; sourceTree = "<group>"; };
 		F04F3ED424F6847600B7D5E0 /* Prueba tecnica Rynair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prueba tecnica Rynair.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F04F3ED724F6847600B7D5E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F04F3ED924F6847600B7D5E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 				F04F3F1C24FA5BD400B7D5E0 /* FormViewController.swift */,
 				F04F3F2B24FA747D00B7D5E0 /* FormViewProtocol.swift */,
 				F04F3F2D24FA75B700B7D5E0 /* FormViewModel.swift */,
+				F01DB18624FD37B1007FE73A /* FormViewConfig.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				F04F3F0824F69CA000B7D5E0 /* Fare.swift in Sources */,
 				F01DB15824FAAAA2007FE73A /* StationSelectionPresenterProtocol.swift in Sources */,
 				F01DB18124FCF599007FE73A /* Dialog.swift in Sources */,
+				F01DB18724FD37B1007FE73A /* FormViewConfig.swift in Sources */,
 				F01DB17224FC1430007FE73A /* FlightSearchPresenterProtocol.swift in Sources */,
 				F04F3F1D24FA5BD400B7D5E0 /* FormViewController.swift in Sources */,
 				F01DB16124FAB3EB007FE73A /* FormInteractorProtocol.swift in Sources */,

@@ -25,14 +25,14 @@ class FormViewController: UIViewController {
     }()
     lazy var originStationTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "From..."
+        textField.placeholder = config.originPlaceholder
         textField.delegate = self
         textField.heightAnchor.constraint(equalToConstant: 60).isActive = true
         return textField
     }()
     lazy var destinationStationTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "To..."
+        textField.placeholder = config.destinationPlaceholder
         textField.delegate = self
         textField.heightAnchor.constraint(equalToConstant: 60).isActive = true
         return textField
@@ -45,7 +45,7 @@ class FormViewController: UIViewController {
             action: nil
         )
         let doneButton = UIBarButtonItem(
-            title: "Done",
+            title: config.doneButton,
             style: .done,
             target: self,
             action: #selector(endEditing)
@@ -54,21 +54,21 @@ class FormViewController: UIViewController {
         toolBar.sizeToFit()
         
         let textField = UITextField()
-        textField.placeholder = "Date out"
+        textField.placeholder = config.departureDatePlaceholder
         textField.inputView = datePicker
         textField.inputAccessoryView = toolBar
         textField.heightAnchor.constraint(equalToConstant: 60).isActive = true
         return textField
     }()
     let adultsLabel = UILabel()
-    lazy var adultsStepper: UIStepper = stepperView(maximumValue: 6, minimumValue: 1)
+    lazy var adultsStepper: UIStepper = stepperView(maximumValue: config.maxAdults, minimumValue: config.minAdults)
     let teensLabel = UILabel()
-    lazy var teensStepper: UIStepper = stepperView(maximumValue: 6, minimumValue: 0)
+    lazy var teensStepper: UIStepper = stepperView(maximumValue: config.maxTeens, minimumValue: config.minTeens)
     let childrenLabel = UILabel()
-    lazy var childrenStepper: UIStepper = stepperView(maximumValue: 6, minimumValue: 0)
+    lazy var childrenStepper: UIStepper = stepperView(maximumValue: config.maxChildren, minimumValue: config.minChildren)
     lazy var searchButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Search", for: .normal)
+        button.setTitle(config.search, for: .normal)
         button.backgroundColor = .blue
         button.addTarget(
             self,
@@ -107,9 +107,10 @@ class FormViewController: UIViewController {
     }
     
     let presenter: FormPresenterProtocol
-    
+    let config: FormViewConfig
     init(presenter: FormPresenterProtocol) {
         self.presenter = presenter
+        self.config = presenter.viewConfig
         super.init(nibName: nil, bundle: nil)
     }
     

@@ -9,6 +9,7 @@
 import Foundation
 
 protocol FormPresenterProtocol: class {
+    var viewConfig: FormViewConfig { get }
     func viewDidLoad()
     func didTapOriginStation()
     func didTapDestinationStation()
