@@ -32,7 +32,9 @@ extension FormDataManager: FormDataManagerProtocol {
                         completion(.success(results.stations))
                     }
                 } else {
-                    completion(.failure(NSError()))
+                    DispatchQueue.main.async {
+                        completion(.failure(NSError()))
+                    }
                 }
             }
         }
@@ -47,14 +49,14 @@ extension FormDataManager: FormDataManagerProtocol {
         var urlRequest = URLRequest(url: requestModel.url!)
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-type")
         let task = URLSession(configuration: .default).dataTask(with: urlRequest) { (data, response, error) in
-            if let error = error {
-                completion(.failure(error))
-            } else if let data = data, let results = try? JSONDecoder().decode(FlightSearchResponse.self, from: data) {
-                DispatchQueue.main.async {
+            DispatchQueue.main.async {
+                if let error = error {
+                    completion(.failure(error))
+                } else if let data = data, let results = try? JSONDecoder().decode(FlightSearchResponse.self, from: data) {
                     completion(.success(results.trips))
+                } else {
+                    completion(.failure(NSError()))
                 }
-            } else {
-                completion(.failure(NSError()))
             }
         }
 
