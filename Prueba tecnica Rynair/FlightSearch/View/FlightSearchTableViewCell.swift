@@ -93,6 +93,7 @@ class FlightSearchTableViewCell: UITableViewCell {
     }()
     let priceLabel: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
         label.textAlignment = .center
         return label
     }()

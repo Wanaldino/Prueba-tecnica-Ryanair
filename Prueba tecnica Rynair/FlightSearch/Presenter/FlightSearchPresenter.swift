@@ -43,7 +43,7 @@ extension FlightSearchPresenter: FlightSearchPresenterProtocol {
                 flightCode: flight.flightNumber,
                 destinationDate: flight.time.last?.transformDate(from: "yyyy-MM-dd'T'HH:mm:ss.SSS", to: "HH:mm") ?? "",
                 destinationStation: trip.destination,
-                price: flight.regularFare.fares.first?.amount.description.appending("€") ?? ""
+                price: flight.regularFare.fares.compactMap({ String(format: "%@: %@", $0.type.text, $0.amount.description.appending("€")) }).joined(separator: " - ")
             ))
         }
     }
