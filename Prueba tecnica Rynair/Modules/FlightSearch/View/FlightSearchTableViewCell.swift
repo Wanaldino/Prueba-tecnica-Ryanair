@@ -9,21 +9,21 @@
 import UIKit
 
 enum FlightSearchTableViewCellCase {
-    case result(Model)
+	case result(FlightSearchTableViewCell.Model)
     case noResults(String)
-    
-    struct Model {
-        let originDate: String
-        let originStation: String
-        let flightTime: String
-        let flightCode: String
-        let destinationDate: String
-        let destinationStation: String
-        let price: String
-    }
 }
 
 class FlightSearchTableViewCell: UITableViewCell {
+	struct Model {
+		let originDate: String
+		let originStation: String
+		let flightTime: String
+		let flightCode: String
+		let destinationDate: String
+		let destinationStation: String
+		let price: String
+	}
+
     lazy var mainStackView: UIStackView = {
         let originStackView = UIStackView(arrangedSubviews: [
             originTimeLabel,
@@ -108,7 +108,7 @@ class FlightSearchTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with model: FlightSearchTableViewCellCase.Model) {
+    func configure(with model: Model) {
         originTimeLabel.text = model.originDate
         originStationLabel.text = model.originStation
         flightTimeLabel.text = model.flightTime

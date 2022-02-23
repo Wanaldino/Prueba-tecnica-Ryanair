@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol FlightSearchPresenterProtocol: class {
+protocol FlightSearchPresenterProtocol: AnyObject {
     func numberOfSections() -> Int
     func titleForHeaderInSection(_ section: Int) -> String?
     func numberOfRowsInSection(_ section: Int) -> Int
