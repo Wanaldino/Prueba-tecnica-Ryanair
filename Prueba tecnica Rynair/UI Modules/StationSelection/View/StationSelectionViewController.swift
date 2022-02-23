@@ -11,7 +11,6 @@ import UIKit
 class StationSelectionViewController: UITableViewController {
     lazy var searchView: UISearchBar = {
         let searchBar = UISearchBar()
-        searchBar.heightAnchor.constraint(equalToConstant: 60).isActive = true
         searchBar.sizeToFit()
         searchBar.becomeFirstResponder()
 		searchBar.delegate = self
