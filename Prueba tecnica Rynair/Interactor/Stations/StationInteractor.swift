@@ -36,13 +36,13 @@ extension StationInteractor: StationInteractorProtocol {
 		}
 	}
 
-	func getDestinations(for station: Station, completion: @escaping (Result<[Station], Error>) -> Void) {
+	func getDestinations(for originStation: Station, completion: @escaping (Result<[Station], Error>) -> Void) {
 		dataManager.retrieveStations { (result) in
 			switch result {
 			case .success(let stations):
 				let filteredStations = stations.filter { (station) -> Bool in
 					station.markets.filter { (market) -> Bool in
-						market.code == station.code
+						market.code == originStation.code
 					}.isNotEmpty
 				}
 				completion(.success(filteredStations))
