@@ -15,6 +15,7 @@
 		D20E931727C68F9B0070A1B8 /* FlightsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E931627C68F9B0070A1B8 /* FlightsDataManager.swift */; };
 		D20E931927C690640070A1B8 /* FlightsDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E931827C690640070A1B8 /* FlightsDataManagerProtocol.swift */; };
 		D20E931B27C690FA0070A1B8 /* FlightsDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E931A27C690FA0070A1B8 /* FlightsDataManagerMock.swift */; };
+		D20E931D27C698560070A1B8 /* StationsLocalCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E931C27C698560070A1B8 /* StationsLocalCache.swift */; };
 		F01DB14124FA9B54007FE73A /* StationSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB14024FA9B54007FE73A /* StationSelectionViewController.swift */; };
 		F01DB14424FA9C32007FE73A /* FormBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB14324FA9C32007FE73A /* FormBuilder.swift */; };
 		F01DB14724FA9C49007FE73A /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB14624FA9C49007FE73A /* Builder.swift */; };
@@ -86,6 +87,7 @@
 		D20E931627C68F9B0070A1B8 /* FlightsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsDataManager.swift; sourceTree = "<group>"; };
 		D20E931827C690640070A1B8 /* FlightsDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsDataManagerProtocol.swift; sourceTree = "<group>"; };
 		D20E931A27C690FA0070A1B8 /* FlightsDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsDataManagerMock.swift; sourceTree = "<group>"; };
+		D20E931C27C698560070A1B8 /* StationsLocalCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsLocalCache.swift; sourceTree = "<group>"; };
 		F01DB14024FA9B54007FE73A /* StationSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionViewController.swift; sourceTree = "<group>"; };
 		F01DB14324FA9C32007FE73A /* FormBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormBuilder.swift; sourceTree = "<group>"; };
 		F01DB14624FA9C49007FE73A /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				F04F3F0E24F6A3A600B7D5E0 /* StationsDataManager.swift */,
 				D20E930427C65CB00070A1B8 /* StationsDataManagerMock.swift */,
 				F01DB16224FAB645007FE73A /* StationsDataManagerProtocol.swift */,
+				D20E931C27C698560070A1B8 /* StationsLocalCache.swift */,
 			);
 			path = Stations;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D20E931D27C698560070A1B8 /* StationsLocalCache.swift in Sources */,
 				F04F3F0624F6982700B7D5E0 /* Flight.swift in Sources */,
 				F01DB17624FC2C90007FE73A /* FlightSearchModel.swift in Sources */,
 				F01DB17424FC14AF007FE73A /* FlightSearchTableViewCell.swift in Sources */,
