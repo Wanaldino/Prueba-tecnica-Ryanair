@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D20E930527C65CB00070A1B8 /* FormDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E930427C65CB00070A1B8 /* FormDataManagerMock.swift */; };
 		F01DB14124FA9B54007FE73A /* StationSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB14024FA9B54007FE73A /* StationSelectionViewController.swift */; };
 		F01DB14424FA9C32007FE73A /* FormBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB14324FA9C32007FE73A /* FormBuilder.swift */; };
 		F01DB14724FA9C49007FE73A /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB14624FA9C49007FE73A /* Builder.swift */; };
@@ -74,6 +75,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D20E930427C65CB00070A1B8 /* FormDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDataManagerMock.swift; sourceTree = "<group>"; };
 		F01DB14024FA9B54007FE73A /* StationSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionViewController.swift; sourceTree = "<group>"; };
 		F01DB14324FA9C32007FE73A /* FormBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormBuilder.swift; sourceTree = "<group>"; };
 		F01DB14624FA9C49007FE73A /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				F04F3F0E24F6A3A600B7D5E0 /* FormDataManager.swift */,
+				D20E930427C65CB00070A1B8 /* FormDataManagerMock.swift */,
 				F01DB16224FAB645007FE73A /* FormDataManagerProtocol.swift */,
 			);
 			path = DataManager;
@@ -550,6 +553,7 @@
 				F04F3F2824FA666900B7D5E0 /* FormInteractor.swift in Sources */,
 				F01DB17F24FC4528007FE73A /* String+dateTransform.swift in Sources */,
 				F04F3F1524F6A58200B7D5E0 /* StationsResponse.swift in Sources */,
+				D20E930527C65CB00070A1B8 /* FormDataManagerMock.swift in Sources */,
 				F01DB14724FA9C49007FE73A /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
