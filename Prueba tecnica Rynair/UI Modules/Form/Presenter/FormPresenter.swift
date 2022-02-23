@@ -10,38 +10,46 @@ import Foundation
 
 class FormPresenter {
     weak var view: FormViewProtocol?
-    let interactor: FormInteractorProtocol
+	let stationsInteractor: StationInteractorProtocol
+	let flightInteractor: FlightInteractorProtocol
     let coordinatorOutput: (FormOutput) -> Void
+
+	var originStation: Station?
+	var destinationStation: Station?
+    var date: Date?
+    var adults = 1
+    var teens = 0
+	var children = 0
     
-    var selectedDate: Date?
-    var selectedAdults: Int = 1
-    var selectedTeens: Int = 0
-    var selectedChildren: Int = 0
-    
-    init(interactor: FormInteractorProtocol, coordinatorOutput: @escaping (FormOutput) -> Void) {
-        self.interactor = interactor
+    init(
+		stationsInteractor: StationInteractorProtocol,
+		flightInteractor: FlightInteractorProtocol,
+		coordinatorOutput: @escaping (FormOutput) -> Void)
+	{
+		self.stationsInteractor = stationsInteractor
+		self.flightInteractor = flightInteractor
         self.coordinatorOutput = coordinatorOutput
     }
     
     var viewModel: FormViewModel {
         var date: String? = nil
-        if let selectedDate = selectedDate {
+		if let selectedDate = self.date {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd/MM/yyyy"
             date = dateFormatter.string(from: selectedDate)
         }
         
-        let selectedAdults = Int(self.selectedAdults)
+        let selectedAdults = Int(self.adults)
         let adultsTextFormat = selectedAdults == 1 ? "number_adults_single".localized : "number_adults_plural".localized
-        let selectedTeens = Int(self.selectedTeens)
+        let selectedTeens = Int(self.teens)
         let teensTextFormat = selectedTeens == 1 ? "number_teens_single".localized : "number_teens_plural".localized
-        let selectedChildren = Int(self.selectedChildren)
+        let selectedChildren = Int(self.children)
         let childrenTextFormat = selectedChildren == 1 ? "number_children_single".localized : "number_children_plural".localized
-        let searchButtonEnable = interactor.selectedOriginStation != nil && interactor.selectedDestinationStation != nil && selectedDate != nil
+        let searchButtonEnable = originStation != nil && destinationStation != nil && date != nil
         
         return FormViewModel(
-            originStation: interactor.selectedOriginStation?.name,
-            destinationStation: interactor.selectedDestinationStation?.name,
+            originStation: originStation?.name,
+            destinationStation: destinationStation?.name,
             departureDate: date,
             adultsText: String(format: adultsTextFormat, selectedAdults),
             teensText: String(format: teensTextFormat, selectedTeens),
@@ -53,7 +61,12 @@ class FormPresenter {
     func selectStation(for stations: [Station], type: StationSelectionType) {
         coordinatorOutput(.selectStation(stations, { [weak self] station in
             guard let self = self else { return }
-            self.interactor.didSelectStation(station, for: type)
+			switch type {
+			case .originStation:
+				self.originStation = station
+			case .destinationStation:
+				self.destinationStation = station
+			}
             self.view?.update(with: self.viewModel)
         }))
     }
@@ -82,13 +95,13 @@ extension FormPresenter: FormPresenterProtocol {
     
     func didTapOriginStation() {
         view?.showLoader()
-        interactor.getOriginStations { [weak self] (result) in
+        stationsInteractor.getStations { [weak self] (result) in
             guard let self = self else { return }
             switch result {
             case .success(let stations):
                 self.selectStation(for: stations, type: .originStation)
                 self.view?.dismissLoader()
-            case .failure(let error):
+			case .failure(_):
                 self.view?.dismissLoader()
                 let model = DialogModel(title: "Something went wrong", message: "Please try again")
                 self.view?.showDialog(with: model)
@@ -97,14 +110,16 @@ extension FormPresenter: FormPresenterProtocol {
     }
     
     func didTapDestinationStation() {
+		guard let originStation = originStation else { return }
+		
         view?.showLoader()
-        interactor.getDestinationStations { [weak self] (result) in
+		stationsInteractor.getDestinations(for: originStation) { [weak self] (result) in
             guard let self = self else { return }
             switch result {
             case .success(let stations):
                 self.selectStation(for: stations, type: .destinationStation)
                 self.view?.dismissLoader()
-            case .failure(let error):
+			case .failure(_):
                 self.view?.dismissLoader()
                 let model = DialogModel(title: "Something went wrong", message: "Please try again")
                 self.view?.showDialog(with: model)
@@ -113,40 +128,49 @@ extension FormPresenter: FormPresenterProtocol {
     }
     
     func didSelectDepartureDate(_ date: Date) {
-        selectedDate = date
+		self.date = date
         view?.update(with: viewModel)
     }
     
     func didChangeSelectedAdults(newValue: Double) {
-        selectedAdults = Int(newValue)
+        adults = Int(newValue)
         view?.update(with: viewModel)
     }
     
     func didChangeSelectedTeens(newValue: Double) {
-        selectedTeens = Int(newValue)
+        teens = Int(newValue)
         view?.update(with: viewModel)
     }
     
     func didChangeSelectedChildren(newValue: Double) {
-        selectedChildren = Int(newValue)
+        children = Int(newValue)
         view?.update(with: viewModel)
     }
     
     func didTapSearch() {
-        guard let date = selectedDate else { return }
+        guard
+			let date = date,
+			let originCode = originStation?.code,
+			let destinationCode = destinationStation?.code
+		else { return }
         
         view?.showLoader()
-        interactor.searchFlight(
-            date: date,
-            adults: selectedAdults,
-            teens: selectedTeens,
-            children: selectedChildren) { [weak self] (result) in
+
+		let model = FlightSearchModel(
+			origin: originCode,
+			destination: destinationCode,
+			dateout: date,
+			adults: adults,
+			teens: teens,
+			children: children
+		)
+        flightInteractor.searchFlight(with: model) { [weak self] (result) in
                 guard let self = self else { return }
                 switch result {
                 case .success(let trips):
                     self.coordinatorOutput(.showSearch(trips))
                     self.view?.dismissLoader()
-                case .failure(let error):
+				case .failure(_):
                     self.view?.dismissLoader()
                     //Handle error as a pop up or something to notify the user
                     let model = DialogModel(title: "Something went wrong", message: "Please try again")
