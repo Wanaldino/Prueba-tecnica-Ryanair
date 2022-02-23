@@ -83,6 +83,7 @@ class FormViewController: UIViewController {
         datePicker.date = Date()
         datePicker.minimumDate = Date()
         datePicker.datePickerMode = .date
+		datePicker.preferredDatePickerStyle = .wheels
         return datePicker
     }()
     func stepperView(maximumValue: Double, minimumValue: Double) -> UIStepper {
