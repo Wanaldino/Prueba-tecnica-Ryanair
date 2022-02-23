@@ -22,6 +22,9 @@ class FlightSearchViewController: UITableViewController {
     
     override func loadView() {
         super.loadView()
+
+		navigationItem.title = "Flights"
+
         tableView.register(FlightSearchTableViewCell.self, forCellReuseIdentifier: "FlightSearchTableViewCell")
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
     }

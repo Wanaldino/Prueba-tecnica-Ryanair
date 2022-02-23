@@ -123,6 +123,8 @@ class FormViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view.backgroundColor = .white
+
+		navigationItem.title = "Form"
         
         view.fill(with: mainStackView, edges: .init(top: 0, left: 8, bottom: 0, right: 8))
     }
