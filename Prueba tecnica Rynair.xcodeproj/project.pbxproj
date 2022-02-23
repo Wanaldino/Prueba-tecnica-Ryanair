@@ -153,6 +153,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D20E930327C65C110070A1B8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F04F3EF924F6877F00B7D5E0 /* Form */,
+				F01DB13E24FA9B1F007FE73A /* StationSelection */,
+				F01DB16624FC11CE007FE73A /* FlightSearch */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		F01DB13E24FA9B1F007FE73A /* StationSelection */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,13 +295,11 @@
 		F04F3ED624F6847600B7D5E0 /* Prueba tecnica Rynair */ = {
 			isa = PBXGroup;
 			children = (
+				D20E930327C65C110070A1B8 /* Modules */,
 				F01DB15B24FAADCA007FE73A /* Mocks */,
 				F01DB14524FA9C42007FE73A /* Common */,
 				F04F3EFA24F6878800B7D5E0 /* Entities */,
 				F04F3F1E24FA5C0600B7D5E0 /* Extensions */,
-				F04F3EF924F6877F00B7D5E0 /* Form */,
-				F01DB13E24FA9B1F007FE73A /* StationSelection */,
-				F01DB16624FC11CE007FE73A /* FlightSearch */,
 				F04F3ED724F6847600B7D5E0 /* AppDelegate.swift */,
 				F04F3ED924F6847600B7D5E0 /* SceneDelegate.swift */,
 				F01DB15C24FAAE3F007FE73A /* MainCoordinator.swift */,
