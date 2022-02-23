@@ -9,6 +9,7 @@
 import Foundation
 
 class FormDataManagerMock {
+	static let `default` = FormDataManagerMock()
 	var stations: [Station]?
 }
 

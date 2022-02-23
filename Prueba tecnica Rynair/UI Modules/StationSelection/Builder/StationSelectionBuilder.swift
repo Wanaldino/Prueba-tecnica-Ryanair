@@ -18,7 +18,8 @@ class StationSelectionBuilder: Builder {
     }
     
     func build() -> UIViewController {
-        let interactor = StationSelectionInteractor(stations: stations)
+		let dataManager = FormDataManagerMock.default
+        let interactor = StationInteractor(dataManager: dataManager)
         let presenter = StationSelectionPresenter(interactor: interactor, coordinatorOutput: coordinatorOutput)
         let viewController = StationSelectionViewController(presenter: presenter)
         

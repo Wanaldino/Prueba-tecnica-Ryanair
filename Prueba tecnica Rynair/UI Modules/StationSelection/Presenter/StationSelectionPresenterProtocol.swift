@@ -8,7 +8,9 @@
 
 import UIKit
 
-protocol StationSelectionPresenterProtocol: UISearchBarDelegate {
+protocol StationSelectionPresenterProtocol: AnyObject {
+	func searchDidChange(_ text: String)
+
     func numberOfRowsInSection(_ section: Int) -> Int
     //To simplify the model the function just retuns the string to show
     func modelForCell(at indexPath: IndexPath) -> String

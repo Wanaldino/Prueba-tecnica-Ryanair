@@ -64,6 +64,7 @@ class FormPresenter {
 			switch type {
 			case .originStation:
 				self.originStation = station
+				self.destinationStation = nil
 			case .destinationStation:
 				self.destinationStation = station
 			}

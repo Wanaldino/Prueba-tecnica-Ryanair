@@ -8,29 +8,48 @@
 
 import UIKit
 
-class StationSelectionPresenter: NSObject {
+class StationSelectionPresenter {
     weak var view: StationSelectionViewProtocol?
-    let interactor: StationSelectionInteractorProtocol
+    let interactor: StationInteractorProtocol
     let coordinatorOutput: (Station) -> Void
-    var searchText = String()
-    var filteredStations: [Station]
-    
-    init(interactor: StationSelectionInteractorProtocol, coordinatorOutput: @escaping (Station) -> Void) {
-        self.interactor = interactor
-        self.coordinatorOutput = coordinatorOutput
-        self.filteredStations = interactor.getStations(for: searchText)
-    }
-}
 
-extension StationSelectionPresenter {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        self.searchText = searchText
-        self.filteredStations = interactor.getStations(for: searchText)
-        self.view?.update()
+    var filteredStations = [Station]()
+    
+    init(interactor: StationInteractorProtocol, coordinatorOutput: @escaping (Station) -> Void) {
+		self.interactor = interactor
+        self.coordinatorOutput = coordinatorOutput
+		getStations()
     }
+
+	lazy var handleStations: ((Result<[Station], Error>) -> Void) = { [weak self] (result) in
+		switch result {
+		case .success(let stations):
+			self?.filteredStations = stations
+			self?.view?.update()
+		case .failure(_):
+			self?.filteredStations = []
+			self?.view?.update()
+		}
+	}
+
+	func filterStations(with text: String) {
+		interactor.filterStations(for: text, completion: handleStations)
+	}
+
+	func getStations() {
+		interactor.getStations(completion: handleStations)
+	}
 }
 
 extension StationSelectionPresenter: StationSelectionPresenterProtocol {
+	func searchDidChange(_ text: String) {
+		if text.isEmpty {
+			getStations()
+		} else {
+			filterStations(with: text)
+		}
+	}
+	
     func numberOfRowsInSection(_ section: Int) -> Int {
         max(filteredStations.count, 1)
     }

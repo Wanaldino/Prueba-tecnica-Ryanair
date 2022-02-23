@@ -9,11 +9,12 @@
 import UIKit
 
 class StationSelectionViewController: UITableViewController {
-    let searchView: UISearchBar = {
+    lazy var searchView: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.heightAnchor.constraint(equalToConstant: 60).isActive = true
         searchBar.sizeToFit()
         searchBar.becomeFirstResponder()
+		searchBar.delegate = self
         return searchBar
     }()
     
@@ -21,7 +22,6 @@ class StationSelectionViewController: UITableViewController {
     
     init(presenter: StationSelectionPresenterProtocol) {
         self.presenter = presenter
-        self.searchView.delegate = presenter
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -55,4 +55,10 @@ extension StationSelectionViewController: StationSelectionViewProtocol {
     func update() {
         tableView.reloadData()
     }
+}
+
+extension StationSelectionViewController: UISearchBarDelegate {
+	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+		presenter.searchDidChange(searchText)
+	}
 }

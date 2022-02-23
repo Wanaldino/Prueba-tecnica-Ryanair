@@ -17,8 +17,6 @@
 		F01DB14724FA9C49007FE73A /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB14624FA9C49007FE73A /* Builder.swift */; };
 		F01DB14A24FA9CAD007FE73A /* StationSelectionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB14924FA9CAD007FE73A /* StationSelectionBuilder.swift */; };
 		F01DB14D24FA9E33007FE73A /* StationSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB14C24FA9E33007FE73A /* StationSelectionPresenter.swift */; };
-		F01DB15024FAA415007FE73A /* StationSelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB14F24FAA415007FE73A /* StationSelectionInteractor.swift */; };
-		F01DB15224FAA443007FE73A /* StationSelectionInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB15124FAA443007FE73A /* StationSelectionInteractorProtocol.swift */; };
 		F01DB15424FAA635007FE73A /* Array+notEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB15324FAA635007FE73A /* Array+notEmpty.swift */; };
 		F01DB15624FAA983007FE73A /* StationSelectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB15524FAA983007FE73A /* StationSelectionViewProtocol.swift */; };
 		F01DB15824FAAAA2007FE73A /* StationSelectionPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB15724FAAAA2007FE73A /* StationSelectionPresenterProtocol.swift */; };
@@ -87,8 +85,6 @@
 		F01DB14624FA9C49007FE73A /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		F01DB14924FA9CAD007FE73A /* StationSelectionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionBuilder.swift; sourceTree = "<group>"; };
 		F01DB14C24FA9E33007FE73A /* StationSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionPresenter.swift; sourceTree = "<group>"; };
-		F01DB14F24FAA415007FE73A /* StationSelectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionInteractor.swift; sourceTree = "<group>"; };
-		F01DB15124FAA443007FE73A /* StationSelectionInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionInteractorProtocol.swift; sourceTree = "<group>"; };
 		F01DB15324FAA635007FE73A /* Array+notEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+notEmpty.swift"; sourceTree = "<group>"; };
 		F01DB15524FAA983007FE73A /* StationSelectionViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionViewProtocol.swift; sourceTree = "<group>"; };
 		F01DB15724FAAAA2007FE73A /* StationSelectionPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -202,7 +198,6 @@
 				F01DB14824FA9C96007FE73A /* Builder */,
 				F01DB13F24FA9B37007FE73A /* View */,
 				F01DB14B24FA9E1E007FE73A /* Presenter */,
-				F01DB14E24FAA3FF007FE73A /* Interactor */,
 			);
 			path = StationSelection;
 			sourceTree = "<group>";
@@ -251,15 +246,6 @@
 				F01DB15724FAAAA2007FE73A /* StationSelectionPresenterProtocol.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		F01DB14E24FAA3FF007FE73A /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				F01DB14F24FAA415007FE73A /* StationSelectionInteractor.swift */,
-				F01DB15124FAA443007FE73A /* StationSelectionInteractorProtocol.swift */,
-			);
-			path = Interactor;
 			sourceTree = "<group>";
 		};
 		F01DB15B24FAADCA007FE73A /* Mocks */ = {
@@ -544,7 +530,6 @@
 				F04F3F0F24F6A3A600B7D5E0 /* FormDataManager.swift in Sources */,
 				F01DB14424FA9C32007FE73A /* FormBuilder.swift in Sources */,
 				D20E930B27C665FC0070A1B8 /* StationInteractorProtocol.swift in Sources */,
-				F01DB15024FAA415007FE73A /* StationSelectionInteractor.swift in Sources */,
 				F01DB14D24FA9E33007FE73A /* StationSelectionPresenter.swift in Sources */,
 				F04F3F2024FA5C1400B7D5E0 /* UIView+fill.swift in Sources */,
 				F01DB14124FA9B54007FE73A /* StationSelectionViewController.swift in Sources */,
@@ -567,7 +552,6 @@
 				F01DB15624FAA983007FE73A /* StationSelectionViewProtocol.swift in Sources */,
 				F04F3EDA24F6847600B7D5E0 /* SceneDelegate.swift in Sources */,
 				F01DB16324FAB645007FE73A /* FormDataManagerProtocol.swift in Sources */,
-				F01DB15224FAA443007FE73A /* StationSelectionInteractorProtocol.swift in Sources */,
 				F01DB19024FD4430007FE73A /* String+localized.swift in Sources */,
 				F04F3F0224F6942E00B7D5E0 /* Trip.swift in Sources */,
 				F04F3F0424F695BD00B7D5E0 /* TripDate.swift in Sources */,

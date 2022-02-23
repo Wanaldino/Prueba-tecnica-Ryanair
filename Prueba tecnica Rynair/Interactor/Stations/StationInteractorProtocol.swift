@@ -10,5 +10,6 @@ import Foundation
 
 protocol StationInteractorProtocol: AnyObject {
 	func getStations(completion: @escaping (Result<[Station], Error>) -> Void)
+	func filterStations(for name: String, completion: @escaping (Result<[Station], Error>) -> Void)
 	func getDestinations(for station: Station, completion: @escaping (Result<[Station], Error>) -> Void)
 }
