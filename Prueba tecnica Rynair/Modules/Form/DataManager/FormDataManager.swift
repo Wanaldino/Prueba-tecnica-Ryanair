@@ -14,11 +14,6 @@ class FormDataManager {
 
 extension FormDataManager: FormDataManagerProtocol {
     func retrieveStations(completion: @escaping (Result<[Station], Error>) -> Void) {
-//        let fileURL = Bundle.main.url(forResource: "stationsMock", withExtension: "json")!
-//        let data = try! Data(contentsOf: fileURL)
-//        let results = try! JSONDecoder().decode(StationsResponse.self, from: data)
-//        completion(.success(results.stations))
-        
         if let stations = stations {
             completion(.success(stations))
         } else if let url = URL(string: "https://tripstest.ryanair.com/static/stations.json") {
@@ -41,11 +36,6 @@ extension FormDataManager: FormDataManagerProtocol {
     }
     
     func retrieveFlight(for requestModel: FlightSearchModel, completion: @escaping (Result<[Trip], Error>) -> Void) {
-//        let fileURL = Bundle.main.url(forResource: "searchMock", withExtension: "json")!
-//        let data = try! Data(contentsOf: fileURL)
-//        let results = try! JSONDecoder().decode(FlightSearchResponse.self, from: data)
-//        completion(results.trips)
-        
         var urlRequest = URLRequest(url: requestModel.url!)
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-type")
         let task = URLSession(configuration: .default).dataTask(with: urlRequest) { (data, response, error) in

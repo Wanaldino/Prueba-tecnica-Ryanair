@@ -14,10 +14,20 @@ class FormDataManagerMock {
 
 extension FormDataManagerMock: FormDataManagerProtocol {
 	func retrieveStations(completion: @escaping (Result<[Station], Error>) -> Void) {
-        let fileURL = Bundle.main.url(forResource: "stationsMock", withExtension: "json")!
-        let data = try! Data(contentsOf: fileURL)
-        let results = try! JSONDecoder().decode(StationsResponse.self, from: data)
-        completion(.success(results.stations))
+		if let stations = stations {
+			completion(.success(stations))
+		} else {
+			DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
+				let fileURL = Bundle.main.url(forResource: "stationsMock", withExtension: "json")!
+				let data = try! Data(contentsOf: fileURL)
+				let results = try! JSONDecoder().decode(StationsResponse.self, from: data)
+
+				DispatchQueue.main.async {
+					self.stations = results.stations
+					completion(.success(results.stations))
+				}
+			}
+		}
 	}
 
 	func retrieveFlight(for requestModel: FlightSearchModel, completion: @escaping (Result<[Trip], Error>) -> Void) {
