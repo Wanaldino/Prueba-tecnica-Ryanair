@@ -103,6 +103,7 @@ class FormViewController: UIViewController {
             UIView(),
             stepper
         ])
+		stackView.alignment = .center
         stackView.heightAnchor.constraint(equalToConstant: 60).isActive = true
         return stackView
     }
