@@ -9,9 +9,9 @@
 import Foundation
 
 class StationInteractor {
-	let dataManager: FormDataManagerProtocol
+	let dataManager: StationsDataManagerProtocol
 
-	init(dataManager: FormDataManagerProtocol) {
+	init(dataManager: StationsDataManagerProtocol) {
 		self.dataManager = dataManager
 	}
 }

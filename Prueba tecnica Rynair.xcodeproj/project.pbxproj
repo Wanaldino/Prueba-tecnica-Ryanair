@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D20E930527C65CB00070A1B8 /* FormDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E930427C65CB00070A1B8 /* FormDataManagerMock.swift */; };
+		D20E930527C65CB00070A1B8 /* StationsDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E930427C65CB00070A1B8 /* StationsDataManagerMock.swift */; };
 		D20E930927C665640070A1B8 /* StationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E930827C665640070A1B8 /* StationInteractor.swift */; };
 		D20E930B27C665FC0070A1B8 /* StationInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E930A27C665FC0070A1B8 /* StationInteractorProtocol.swift */; };
 		D20E930F27C667080070A1B8 /* FlightInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E930E27C667080070A1B8 /* FlightInteractor.swift */; };
 		D20E931127C667160070A1B8 /* FlightInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E931027C667160070A1B8 /* FlightInteractorProtocol.swift */; };
+		D20E931727C68F9B0070A1B8 /* FlightsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E931627C68F9B0070A1B8 /* FlightsDataManager.swift */; };
+		D20E931927C690640070A1B8 /* FlightsDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E931827C690640070A1B8 /* FlightsDataManagerProtocol.swift */; };
+		D20E931B27C690FA0070A1B8 /* FlightsDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E931A27C690FA0070A1B8 /* FlightsDataManagerMock.swift */; };
 		F01DB14124FA9B54007FE73A /* StationSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB14024FA9B54007FE73A /* StationSelectionViewController.swift */; };
 		F01DB14424FA9C32007FE73A /* FormBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB14324FA9C32007FE73A /* FormBuilder.swift */; };
 		F01DB14724FA9C49007FE73A /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB14624FA9C49007FE73A /* Builder.swift */; };
@@ -23,7 +26,7 @@
 		F01DB15A24FAAD84007FE73A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB15924FAAD84007FE73A /* Coordinator.swift */; };
 		F01DB15D24FAAE3F007FE73A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB15C24FAAE3F007FE73A /* MainCoordinator.swift */; };
 		F01DB15F24FAB05F007FE73A /* FormOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB15E24FAB05F007FE73A /* FormOutput.swift */; };
-		F01DB16324FAB645007FE73A /* FormDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB16224FAB645007FE73A /* FormDataManagerProtocol.swift */; };
+		F01DB16324FAB645007FE73A /* StationsDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB16224FAB645007FE73A /* StationsDataManagerProtocol.swift */; };
 		F01DB16C24FC1237007FE73A /* FlightSearchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB16B24FC1237007FE73A /* FlightSearchBuilder.swift */; };
 		F01DB16E24FC13EA007FE73A /* FlightSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB16D24FC13EA007FE73A /* FlightSearchViewController.swift */; };
 		F01DB17024FC141B007FE73A /* FlightSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DB16F24FC141B007FE73A /* FlightSearchPresenter.swift */; };
@@ -50,7 +53,7 @@
 		F04F3F0624F6982700B7D5E0 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F0524F6982700B7D5E0 /* Flight.swift */; };
 		F04F3F0824F69CA000B7D5E0 /* Fare.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F0724F69CA000B7D5E0 /* Fare.swift */; };
 		F04F3F0A24F69E7900B7D5E0 /* FareInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F0924F69E7900B7D5E0 /* FareInfo.swift */; };
-		F04F3F0F24F6A3A600B7D5E0 /* FormDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F0E24F6A3A600B7D5E0 /* FormDataManager.swift */; };
+		F04F3F0F24F6A3A600B7D5E0 /* StationsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F0E24F6A3A600B7D5E0 /* StationsDataManager.swift */; };
 		F04F3F1224F6A53A00B7D5E0 /* stationsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = F04F3F1024F6A53A00B7D5E0 /* stationsMock.json */; };
 		F04F3F1324F6A53A00B7D5E0 /* searchMock.json in Resources */ = {isa = PBXBuildFile; fileRef = F04F3F1124F6A53A00B7D5E0 /* searchMock.json */; };
 		F04F3F1524F6A58200B7D5E0 /* StationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F3F1424F6A58200B7D5E0 /* StationsResponse.swift */; };
@@ -75,11 +78,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D20E930427C65CB00070A1B8 /* FormDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDataManagerMock.swift; sourceTree = "<group>"; };
+		D20E930427C65CB00070A1B8 /* StationsDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsDataManagerMock.swift; sourceTree = "<group>"; };
 		D20E930827C665640070A1B8 /* StationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationInteractor.swift; sourceTree = "<group>"; };
 		D20E930A27C665FC0070A1B8 /* StationInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationInteractorProtocol.swift; sourceTree = "<group>"; };
 		D20E930E27C667080070A1B8 /* FlightInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInteractor.swift; sourceTree = "<group>"; };
 		D20E931027C667160070A1B8 /* FlightInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInteractorProtocol.swift; sourceTree = "<group>"; };
+		D20E931627C68F9B0070A1B8 /* FlightsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsDataManager.swift; sourceTree = "<group>"; };
+		D20E931827C690640070A1B8 /* FlightsDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsDataManagerProtocol.swift; sourceTree = "<group>"; };
+		D20E931A27C690FA0070A1B8 /* FlightsDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsDataManagerMock.swift; sourceTree = "<group>"; };
 		F01DB14024FA9B54007FE73A /* StationSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionViewController.swift; sourceTree = "<group>"; };
 		F01DB14324FA9C32007FE73A /* FormBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormBuilder.swift; sourceTree = "<group>"; };
 		F01DB14624FA9C49007FE73A /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
@@ -91,7 +97,7 @@
 		F01DB15924FAAD84007FE73A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F01DB15C24FAAE3F007FE73A /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		F01DB15E24FAB05F007FE73A /* FormOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormOutput.swift; sourceTree = "<group>"; };
-		F01DB16224FAB645007FE73A /* FormDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDataManagerProtocol.swift; sourceTree = "<group>"; };
+		F01DB16224FAB645007FE73A /* StationsDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsDataManagerProtocol.swift; sourceTree = "<group>"; };
 		F01DB16B24FC1237007FE73A /* FlightSearchBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchBuilder.swift; sourceTree = "<group>"; };
 		F01DB16D24FC13EA007FE73A /* FlightSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchViewController.swift; sourceTree = "<group>"; };
 		F01DB16F24FC141B007FE73A /* FlightSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchPresenter.swift; sourceTree = "<group>"; };
@@ -123,7 +129,7 @@
 		F04F3F0524F6982700B7D5E0 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		F04F3F0724F69CA000B7D5E0 /* Fare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fare.swift; sourceTree = "<group>"; };
 		F04F3F0924F69E7900B7D5E0 /* FareInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FareInfo.swift; sourceTree = "<group>"; };
-		F04F3F0E24F6A3A600B7D5E0 /* FormDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDataManager.swift; sourceTree = "<group>"; };
+		F04F3F0E24F6A3A600B7D5E0 /* StationsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsDataManager.swift; sourceTree = "<group>"; };
 		F04F3F1024F6A53A00B7D5E0 /* stationsMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stationsMock.json; sourceTree = "<group>"; };
 		F04F3F1124F6A53A00B7D5E0 /* searchMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = searchMock.json; sourceTree = "<group>"; };
 		F04F3F1424F6A58200B7D5E0 /* StationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsResponse.swift; sourceTree = "<group>"; };
@@ -190,6 +196,35 @@
 				D20E931027C667160070A1B8 /* FlightInteractorProtocol.swift */,
 			);
 			path = Flight;
+			sourceTree = "<group>";
+		};
+		D20E931227C68F190070A1B8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D20E931327C68F290070A1B8 /* Stations */,
+				D20E931427C68F430070A1B8 /* Flights */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D20E931327C68F290070A1B8 /* Stations */ = {
+			isa = PBXGroup;
+			children = (
+				F04F3F0E24F6A3A600B7D5E0 /* StationsDataManager.swift */,
+				D20E930427C65CB00070A1B8 /* StationsDataManagerMock.swift */,
+				F01DB16224FAB645007FE73A /* StationsDataManagerProtocol.swift */,
+			);
+			path = Stations;
+			sourceTree = "<group>";
+		};
+		D20E931427C68F430070A1B8 /* Flights */ = {
+			isa = PBXGroup;
+			children = (
+				D20E931627C68F9B0070A1B8 /* FlightsDataManager.swift */,
+				D20E931A27C690FA0070A1B8 /* FlightsDataManagerMock.swift */,
+				D20E931827C690640070A1B8 /* FlightsDataManagerProtocol.swift */,
+			);
+			path = Flights;
 			sourceTree = "<group>";
 		};
 		F01DB13E24FA9B1F007FE73A /* StationSelection */ = {
@@ -316,6 +351,7 @@
 			children = (
 				D20E930327C65C110070A1B8 /* UI Modules */,
 				D20E930727C665320070A1B8 /* Interactor */,
+				D20E931227C68F190070A1B8 /* Data */,
 				F01DB15B24FAADCA007FE73A /* Mocks */,
 				F01DB14524FA9C42007FE73A /* Common */,
 				F04F3EFA24F6878800B7D5E0 /* Entities */,
@@ -348,7 +384,6 @@
 				F01DB14224FA9C27007FE73A /* Builder */,
 				F04F3F1B24FA5BC500B7D5E0 /* View */,
 				F04F3F2324FA662A00B7D5E0 /* Presenter */,
-				F04F3F0D24F6A38700B7D5E0 /* DataManager */,
 			);
 			path = Form;
 			sourceTree = "<group>";
@@ -368,16 +403,6 @@
 				F04F3F0924F69E7900B7D5E0 /* FareInfo.swift */,
 			);
 			path = Entities;
-			sourceTree = "<group>";
-		};
-		F04F3F0D24F6A38700B7D5E0 /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				F04F3F0E24F6A3A600B7D5E0 /* FormDataManager.swift */,
-				D20E930427C65CB00070A1B8 /* FormDataManagerMock.swift */,
-				F01DB16224FAB645007FE73A /* FormDataManagerProtocol.swift */,
-			);
-			path = DataManager;
 			sourceTree = "<group>";
 		};
 		F04F3F1B24FA5BC500B7D5E0 /* View */ = {
@@ -527,7 +552,7 @@
 				F04F3F1D24FA5BD400B7D5E0 /* FormViewController.swift in Sources */,
 				F04F3ED824F6847600B7D5E0 /* AppDelegate.swift in Sources */,
 				F04F3F0A24F69E7900B7D5E0 /* FareInfo.swift in Sources */,
-				F04F3F0F24F6A3A600B7D5E0 /* FormDataManager.swift in Sources */,
+				F04F3F0F24F6A3A600B7D5E0 /* StationsDataManager.swift in Sources */,
 				F01DB14424FA9C32007FE73A /* FormBuilder.swift in Sources */,
 				D20E930B27C665FC0070A1B8 /* StationInteractorProtocol.swift in Sources */,
 				F01DB14D24FA9E33007FE73A /* StationSelectionPresenter.swift in Sources */,
@@ -541,6 +566,7 @@
 				F01DB15A24FAAD84007FE73A /* Coordinator.swift in Sources */,
 				F04F3F2224FA63A300B7D5E0 /* UIView+dismissKeyboard.swift in Sources */,
 				F01DB16C24FC1237007FE73A /* FlightSearchBuilder.swift in Sources */,
+				D20E931B27C690FA0070A1B8 /* FlightsDataManagerMock.swift in Sources */,
 				F01DB17024FC141B007FE73A /* FlightSearchPresenter.swift in Sources */,
 				F04F3F2C24FA747D00B7D5E0 /* FormViewProtocol.swift in Sources */,
 				F04F3F0024F689A100B7D5E0 /* FlightSearchResponse.swift in Sources */,
@@ -551,17 +577,19 @@
 				F01DB18324FCFABD007FE73A /* Loader.swift in Sources */,
 				F01DB15624FAA983007FE73A /* StationSelectionViewProtocol.swift in Sources */,
 				F04F3EDA24F6847600B7D5E0 /* SceneDelegate.swift in Sources */,
-				F01DB16324FAB645007FE73A /* FormDataManagerProtocol.swift in Sources */,
+				F01DB16324FAB645007FE73A /* StationsDataManagerProtocol.swift in Sources */,
 				F01DB19024FD4430007FE73A /* String+localized.swift in Sources */,
 				F04F3F0224F6942E00B7D5E0 /* Trip.swift in Sources */,
 				F04F3F0424F695BD00B7D5E0 /* TripDate.swift in Sources */,
 				F04F3EFE24F688E400B7D5E0 /* Market.swift in Sources */,
 				D20E930F27C667080070A1B8 /* FlightInteractor.swift in Sources */,
+				D20E931927C690640070A1B8 /* FlightsDataManagerProtocol.swift in Sources */,
+				D20E931727C68F9B0070A1B8 /* FlightsDataManager.swift in Sources */,
 				F04F3F2E24FA75B700B7D5E0 /* FormViewModel.swift in Sources */,
 				F01DB15F24FAB05F007FE73A /* FormOutput.swift in Sources */,
 				F01DB17F24FC4528007FE73A /* String+dateTransform.swift in Sources */,
 				F04F3F1524F6A58200B7D5E0 /* StationsResponse.swift in Sources */,
-				D20E930527C65CB00070A1B8 /* FormDataManagerMock.swift in Sources */,
+				D20E930527C65CB00070A1B8 /* StationsDataManagerMock.swift in Sources */,
 				F01DB14724FA9C49007FE73A /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

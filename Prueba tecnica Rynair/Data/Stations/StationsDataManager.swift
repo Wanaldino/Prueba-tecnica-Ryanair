@@ -1,5 +1,5 @@
 //
-//  FormDataManager.swift
+//  StationsDataManager.swift
 //  Prueba tecnica Rynair
 //
 //  Created by Wanaldino Antimonio on 26/08/2020.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-class FormDataManager {
+class StationsDataManager {
     var stations: [Station]?
 }
 
-extension FormDataManager: FormDataManagerProtocol {
+extension StationsDataManager: StationsDataManagerProtocol {
     func retrieveStations(completion: @escaping (Result<[Station], Error>) -> Void) {
         if let stations = stations {
             completion(.success(stations))
@@ -33,23 +33,5 @@ extension FormDataManager: FormDataManagerProtocol {
                 }
             }
         }
-    }
-    
-    func retrieveFlight(for requestModel: FlightSearchModel, completion: @escaping (Result<[Trip], Error>) -> Void) {
-        var urlRequest = URLRequest(url: requestModel.url!)
-        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-type")
-        let task = URLSession(configuration: .default).dataTask(with: urlRequest) { (data, response, error) in
-            DispatchQueue.main.async {
-                if let error = error {
-                    completion(.failure(error))
-                } else if let data = data, let results = try? JSONDecoder().decode(FlightSearchResponse.self, from: data) {
-                    completion(.success(results.trips))
-                } else {
-                    completion(.failure(NSError()))
-                }
-            }
-        }
-
-        task.resume()
     }
 }

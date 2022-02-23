@@ -9,9 +9,9 @@
 import Foundation
 
 class FlightInteractor {
-	let dataManager: FormDataManagerProtocol
+	let dataManager: FlightsDataManagerProtocol
 
-	init(dataManager: FormDataManagerProtocol) {
+	init(dataManager: FlightsDataManagerProtocol) {
 		self.dataManager = dataManager
 	}
 }

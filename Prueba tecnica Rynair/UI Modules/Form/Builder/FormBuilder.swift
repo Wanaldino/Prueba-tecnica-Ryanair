@@ -16,9 +16,10 @@ class FormBuilder: Builder {
     }
     
     func build() -> UIViewController {
-		let dataManager = FormDataManagerMock.default
-		let stationsInteractor = StationInteractor(dataManager: dataManager)
-		let flightInteractor = FlightInteractor(dataManager: dataManager)
+		let stationsManager = StationsDataManagerMock.default
+		let stationsInteractor = StationInteractor(dataManager: stationsManager)
+		let flightDataManager = FlightsDataManagerMock.default
+		let flightInteractor = FlightInteractor(dataManager: flightDataManager)
 		let presenter = FormPresenter(
 			stationsInteractor: stationsInteractor,
 			flightInteractor: flightInteractor,

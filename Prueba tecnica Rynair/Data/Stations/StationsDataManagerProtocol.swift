@@ -1,5 +1,5 @@
 //
-//  FormDataManagerProtocol.swift
+//  StationsDataManagerProtocol.swift
 //  Prueba tecnica Rynair
 //
 //  Created by Wanaldino Antimonio on 29/08/2020.
@@ -8,7 +8,6 @@
 
 import Foundation
 
-protocol FormDataManagerProtocol {
+protocol StationsDataManagerProtocol {
     func retrieveStations(completion: @escaping (Result<[Station], Error>) -> Void)
-    func retrieveFlight(for requestModel: FlightSearchModel, completion: @escaping (Result<[Trip], Error>) -> Void) 
 }

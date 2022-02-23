@@ -1,5 +1,5 @@
 //
-//  FormDataManagerMock.swift
+//  StationsDataManagerMock.swift
 //  Prueba tecnica Rynair
 //
 //  Created by Carlos Martinez Medina on 23/2/22.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-class FormDataManagerMock {
-	static let `default` = FormDataManagerMock()
+class StationsDataManagerMock {
+	static let `default` = StationsDataManagerMock()
 	var stations: [Station]?
 }
 
-extension FormDataManagerMock: FormDataManagerProtocol {
+extension StationsDataManagerMock: StationsDataManagerProtocol {
 	func retrieveStations(completion: @escaping (Result<[Station], Error>) -> Void) {
 		if let stations = stations {
 			completion(.success(stations))
@@ -29,12 +29,5 @@ extension FormDataManagerMock: FormDataManagerProtocol {
 				}
 			}
 		}
-	}
-
-	func retrieveFlight(for requestModel: FlightSearchModel, completion: @escaping (Result<[Trip], Error>) -> Void) {
-        let fileURL = Bundle.main.url(forResource: "searchMock", withExtension: "json")!
-        let data = try! Data(contentsOf: fileURL)
-        let results = try! JSONDecoder().decode(FlightSearchResponse.self, from: data)
-		completion(.success(results.trips))
 	}
 }
