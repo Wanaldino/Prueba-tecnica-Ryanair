@@ -97,15 +97,14 @@ extension FormPresenter: FormPresenterProtocol {
     func didTapOriginStation() {
         view?.showLoader()
         stationsInteractor.getStations { [weak self] (result) in
-            guard let self = self else { return }
             switch result {
             case .success(let stations):
-                self.selectStation(for: stations, type: .originStation)
-                self.view?.dismissLoader()
+                self?.selectStation(for: stations, type: .originStation)
+                self?.view?.dismissLoader()
 			case .failure(_):
-                self.view?.dismissLoader()
+                self?.view?.dismissLoader()
                 let model = DialogModel(title: "Something went wrong", message: "Please try again")
-                self.view?.showDialog(with: model)
+                self?.view?.showDialog(with: model)
             }
         }
     }
@@ -115,15 +114,14 @@ extension FormPresenter: FormPresenterProtocol {
 		
         view?.showLoader()
 		stationsInteractor.getDestinations(for: originStation) { [weak self] (result) in
-            guard let self = self else { return }
             switch result {
             case .success(let stations):
-                self.selectStation(for: stations, type: .destinationStation)
-                self.view?.dismissLoader()
+                self?.selectStation(for: stations, type: .destinationStation)
+                self?.view?.dismissLoader()
 			case .failure(_):
-                self.view?.dismissLoader()
+                self?.view?.dismissLoader()
                 let model = DialogModel(title: "Something went wrong", message: "Please try again")
-                self.view?.showDialog(with: model)
+                self?.view?.showDialog(with: model)
             }
         }
     }
