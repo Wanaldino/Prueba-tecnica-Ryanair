@@ -22,12 +22,11 @@ extension StationInteractor: StationInteractorProtocol {
 	}
 
 	func filterStations(for name: String, completion: @escaping (Result<[Station], Error>) -> Void) {
-		let searchText = name.trimmingCharacters(in: .whitespaces)
-		if searchText.isEmpty { return completion(.success([])) }
-		
-		dataManager.retrieveStations { result in
+		getStations { result in
 			switch result {
 			case .success(let stations):
+				let searchText = name.trimmingCharacters(in: .whitespaces)
+				if searchText.isEmpty { return completion(.success([])) }
 				let stations = stations.filter({ $0.anyNameContains(string: searchText) })
 				completion(.success(stations))
 			case .failure(let error):
@@ -37,7 +36,7 @@ extension StationInteractor: StationInteractorProtocol {
 	}
 
 	func getDestinations(for originStation: Station, completion: @escaping (Result<[Station], Error>) -> Void) {
-		dataManager.retrieveStations { (result) in
+		getStations { (result) in
 			switch result {
 			case .success(let stations):
 				let filteredStations = stations.filter { (station) -> Bool in

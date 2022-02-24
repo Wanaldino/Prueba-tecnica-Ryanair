@@ -10,7 +10,10 @@ import Foundation
 
 class StationsLocalCache {
 	static let `default` = StationsLocalCache()
-	private init() {}
+
+	init(stations: [Station]? = nil) {
+		self.stations = stations
+	}
 
 	var stations: [Station]?
 

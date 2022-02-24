@@ -18,7 +18,8 @@ class StationSelectionBuilder: Builder {
     }
     
     func build() -> UIViewController {
-		let dataManager = StationsDataManagerMock(cache: StationsLocalCache.default)
+		let cache = StationsLocalCache(stations: stations)
+		let dataManager = StationsDataManagerMock(cache: cache)
         let interactor = StationInteractor(dataManager: dataManager)
         let presenter = StationSelectionPresenter(interactor: interactor, coordinatorOutput: coordinatorOutput)
         let viewController = StationSelectionViewController(presenter: presenter)
